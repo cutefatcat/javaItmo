@@ -56,7 +56,7 @@ public class Loops {
     /**
      * 4) Проверьте,  является ли  натуральное число — простым.
      */
-    
+
     public static void checkPrimeNumber(int num) {
         int k;
         boolean isPrime = true;
@@ -64,7 +64,7 @@ public class Loops {
         if (num !=2) {
             if (num % 2 != 0){
                 k = (int) Math.ceil(Math.sqrt(num));
-                for (int i = 3; i < k; i++) {
+                for (int i = 3; i <= k; i++) {
                     if (num % i == 0) {
                         isPrime = false;
                         break;
