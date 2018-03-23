@@ -56,7 +56,7 @@ public class Loops {
     /**
      * 4) Проверьте,  является ли  натуральное число — простым.
      */
-        // не решена до конца
+    
     public static void checkPrimeNumber(int num) {
         int k;
         boolean isPrime = true;

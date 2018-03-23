@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc3ddb1-26fa-4d04-ba20-8b32c04946e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-homework/out/production/javaItmo/lecture2/loops/Loops.class" afterPath="$PROJECT_DIR$/java-homework/out/production/javaItmo/lecture2/loops/Loops.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java" afterPath="$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +16,8 @@
       <file leaf-file-name="Loops.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="84">
+              <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -284,8 +282,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="84">
+          <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
           <folding />
         </state>
       </provider>
