@@ -59,19 +59,23 @@ public class Loops {
         // не решена до конца
     public static void checkPrimeNumber(int num) {
         int k;
+        boolean isPrime = true;
         String res = "Простое число";
-        if (num % 2 != 0 && num != 2) {
-            k = (int) Math.ceil(Math.sqrt(num));
-            for (int i = 3; i < k; i++) {
-                if (num % i == 0) {
-                    System.out.println(res);
-                } else {
-                    System.out.println("Не является ростое число");
+        if (num !=2) {
+            if (num % 2 != 0){
+                k = (int) Math.ceil(Math.sqrt(num));
+                for (int i = 3; i < k; i++) {
+                    if (num % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
                 }
+            } else {
+                isPrime = false;
             }
-        } else {
-            System.out.println(res);
         }
+
+        System.out.println(isPrime);
     }
 
 
