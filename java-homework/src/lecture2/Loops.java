@@ -1,4 +1,4 @@
-package lecture2.loops;
+package lecture2;
 
 
 public class Loops {
@@ -6,7 +6,7 @@ public class Loops {
         // print4DigitSequence();
         //printElementsMultiplesOf5();
         //printElementsMultiplesOf2();
-
+        printFibonacciNumbers();
         checkPrimeNumber(89);
         countLuckyTicket();
         countSymmetricalCombinations();
@@ -85,8 +85,18 @@ public class Loops {
      * следующий — сумме двух предыдущих.
      */
 
-    public static void k(){
+    public static void printFibonacciNumbers(){
+        int a = 1; int b = 1;
+        int n = 11;
+        System.out.println(a);
+        System.out.println(b);
 
+        for (int i =0; i < n - 2; i++){
+            int next = a + b;
+            System.out.println(next);
+            a = b;
+            b = next;
+        }
     }
 
     /**

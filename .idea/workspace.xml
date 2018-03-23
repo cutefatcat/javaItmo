@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc3ddb1-26fa-4d04-ba20-8b32c04946e5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/java-homework/src/lecture2/loops/t2.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-homework/out/production/javaItmo/lecture2/loops/Loops.class" afterPath="$PROJECT_DIR$/java-homework/out/production/javaItmo/lecture2/loops/Loops.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java" afterPath="$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java" afterPath="$PROJECT_DIR$/java-homework/src/lecture2/Loops.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/java-homework/src/lecture2/loops/t2.java" afterPath="$PROJECT_DIR$/java-homework/src/lecture2/t2.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,17 +18,17 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Loops.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java">
+        <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/Loops.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+            <state relative-caret-position="462">
+              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="t2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/loops/t2.java">
+        <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/t2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1512">
               <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
@@ -49,13 +51,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java" />
+        <option value="$PROJECT_DIR$/java-homework/src/lecture2/Loops.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="32" />
-    <option name="y" value="84" />
-    <option name="width" value="1859" />
+    <option name="x" value="701" />
+    <option name="y" value="2" />
+    <option name="width" value="1216" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
@@ -101,7 +104,7 @@
               <item name="javaItmo" type="462c0819:PsiDirectoryNode" />
               <item name="java-homework" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="loops" type="462c0819:PsiDirectoryNode" />
+              <item name="lecture2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,8 +256,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="32" y="84" width="1859" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="701" y="2" width="1216" height="1080" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -269,7 +271,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19282137" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -292,7 +294,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/loops/t2.java">
+    <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/t2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1512">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
@@ -300,10 +302,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/loops/Loops.java">
+    <entry file="file://$PROJECT_DIR$/java-homework/src/lecture2/Loops.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        <state relative-caret-position="462">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding />
         </state>
       </provider>
