@@ -95,22 +95,20 @@ public class Loops {
      * потребуется. С помощью программы подсчитайте сколько счастливых билетов в одном рулоне?
      */
 
-    // не решена
     public static void countLuckyTicket() {
         int iSum;
         int jSum;
         int count = 0;
-        for (int i =0; i < 999; i++){
-            for (int j = 1; j <999; j++){
-               iSum = i%100/10 + i%100%10 +i%100;
-               jSum = j%100/10 + j%100%10 +j%100;
-               if (i == j){
+        for (int i =0; i < 1000; i++){
+            for (int j = 1; j < 1000; j++){
+               iSum = i%10 +(i/10)%10 + (i/10/10)%10;
+               jSum = j%10 +(j/10)%10 + (j/10/10)%10;
+               if (iSum == jSum){
                    count++;
                }
             }
         }
         System.out.println(count);
-
     }
 
     /**
