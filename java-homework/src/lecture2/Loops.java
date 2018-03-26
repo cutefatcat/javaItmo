@@ -60,9 +60,9 @@ public class Loops {
     public static void checkPrimeNumber(int num) {
         int k;
         boolean isPrime = true;
-        String res = "Простое число";
         if (num !=2) {
             if (num % 2 != 0){
+                // Math.ceil() - данный метод округляет число до ближайшего целого вверх.
                 k = (int) Math.ceil(Math.sqrt(num));
                 for (int i = 3; i <= k; i++) {
                     if (num % i == 0) {

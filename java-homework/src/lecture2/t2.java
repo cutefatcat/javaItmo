@@ -97,7 +97,8 @@ public class t2 {
      */
 
     public static void sortAscending(int a, int b, int c) {
-        String pattern = "%d, %d, %d";
+        String pattern = "%d, %d, %d"; // - плохой вариант, т.к. String.Format() использует regexp
+        // и значительно снижает производительность
         String result;
         if (a < b && a < c){
             if(b < c){
