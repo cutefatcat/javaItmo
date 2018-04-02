@@ -24,16 +24,16 @@ public class Accumulator {
         acc.accum(5);
         System.out.println(acc.getValue());
         Accumulator acc2 =  new Accumulator(new Minus(), 10);
-        System.out.println(acc.getValue());
+        System.out.println(acc2.getValue());
         acc2.accum(5);
-        System.out.println(acc.getValue());
+        System.out.println(acc2.getValue());
         Accumulator acc3 =  new Accumulator(new Multiply(), 10);
-        System.out.println(acc.getValue());
+        System.out.println(acc3.getValue());
         acc3.accum(5);
-        System.out.println(acc.getValue());
+        System.out.println(acc3.getValue());
         Accumulator acc4 =  new Accumulator(new Divide(), 10);
-        System.out.println(acc.getValue());
+        System.out.println(acc4.getValue());
         acc4.accum(0);
-        System.out.println(acc.getValue());
+        System.out.println(acc4.getValue());
     }
 }
