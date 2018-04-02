@@ -1,11 +1,14 @@
 package lecture3;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Strings {
-    public static void main(Strings[] main){
-        t1();
-        //t2();
+    public static void main(String[] args){
+        //t1();
+        t2();
     }
 
     /**
@@ -34,7 +37,6 @@ public class Strings {
         } while (newSubstr.equals(replacementSubstr));
 
         str.replace(replacementSubstr,newSubstr);
-
     }
 
     /**
@@ -43,7 +45,32 @@ public class Strings {
      */
 
     public static void t2(){
- 
+        Scanner sc = new Scanner(System.in);
+        String str;
+        do {
+            System.out.println("Введите строку");
+            str = sc.nextLine();
+        } while (str.isEmpty());
+
+        List<Character> list = new ArrayList<>();
+        for (int i = 0; i < str.length(); i++){
+            list.add(str.charAt(i));
+        }
+
+        for(int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(' ')){
+                list.remove(i);
+            }
+            for (int j = list.size()-1; j !=i; j--) {
+                if (list.get(i).equals(list.get(j))) {
+                    list.remove(j);
+                }
+            }
+        }
+
+        for (Character c : list) {
+            System.out.print(c);
+        }
     }
 
     /**
@@ -54,6 +81,6 @@ public class Strings {
      */
 
     public static void t3(){
-
+      
     }
 }
