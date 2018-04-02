@@ -25,15 +25,15 @@ public class Accumulator {
         System.out.println(acc.getValue());
         Accumulator acc2 =  new Accumulator(new Minus(), 10);
         System.out.println(acc.getValue());
-        acc.accum(5);
+        acc2.accum(5);
         System.out.println(acc.getValue());
         Accumulator acc3 =  new Accumulator(new Multiply(), 10);
         System.out.println(acc.getValue());
-        acc.accum(5);
+        acc3.accum(5);
         System.out.println(acc.getValue());
         Accumulator acc4 =  new Accumulator(new Divide(), 10);
         System.out.println(acc.getValue());
-        acc.accum(5);
+        acc4.accum(0);
         System.out.println(acc.getValue());
     }
 }
