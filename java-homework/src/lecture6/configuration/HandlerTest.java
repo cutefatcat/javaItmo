@@ -17,23 +17,27 @@ import java.util.List;
  */
 public class HandlerTest {
     public static void main(String[] args) {
-        try {
-            List<ConfigItem> file = new ArrayList<>();
+        //в зависимости от имени возращает конкр объект и потом вызываем методы рид и райт
+        List<ConfigItem> data = new ArrayList<>();
+        String xmlFile = "test.xml";
+        String jsonFile = "test.json";
+        String unknownFile = "test.unknown";
+        if (Handler.validateFileType(xmlFile)) {
             Handler xmlHandler = Handler.getInstance("test.xml");
-            Handler jsonHandler = Handler.getInstance("test.json");
-            Handler unknowHandler = Handler.getInstance("test.unknow");
-            //в зависимости от имени возращает конкр объект и потом вызываем методы рид и райт
-
             xmlHandler.read();
-            xmlHandler.write(file);
+            xmlHandler.write(data);
+        }
 
+        if (Handler.validateFileType(jsonFile)) {
+            Handler jsonHandler = Handler.getInstance(jsonFile);
             jsonHandler.read();
-            jsonHandler.write(file);
+            jsonHandler.write(data);
+        }
 
-            unknowHandler.read();
-            unknowHandler.write(file);
-        } catch (Exception e){
-            e.printStackTrace();
+        if (Handler.validateFileType(unknownFile)){
+            Handler unknownHandler = Handler.getInstance(unknownFile);
+            unknownHandler.read();
+            unknownHandler.write(data);
         }
     }
 }
