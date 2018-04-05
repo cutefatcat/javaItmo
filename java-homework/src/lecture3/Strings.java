@@ -53,24 +53,27 @@ public class Strings {
         } while (str.isEmpty());
 
         List<Character> list = new ArrayList<>();
-        for (int i = 0; i < str.length(); i++){
-            list.add(str.charAt(i));
-        }
 
-        for(int i = 0; i < list.size(); i++) {
-            if (list.get(i).equals(' ')){
-                list.remove(i);
+
+        for (int i = 0; i < str.length(); i++){
+            if (str.charAt(i) == ' ' || contains(list,str.charAt(i))){
+                continue;
             }
-            for (int j = list.size()-1; j !=i; j--) {
-                if (list.get(i).equals(list.get(j))) {
-                    list.remove(j);
-                }
-            }
+            list.add(str.charAt(i));
         }
 
         for (Character c : list) {
             System.out.print(c);
         }
+    }
+
+    private static boolean contains(List<Character> list, char symbol){
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i).equals(symbol)){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
