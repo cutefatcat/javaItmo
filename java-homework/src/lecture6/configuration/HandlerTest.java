@@ -1,5 +1,8 @@
 package lecture6.configuration;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Pеализовать простое средство для считывания и записи информации из конфигурационных файлов.
  Реализацию механизмов чтения/записи файла опустим, чтобы сосредоточить внимание на структере кода
@@ -14,9 +17,24 @@ package lecture6.configuration;
  */
 public class HandlerTest {
     public static void main(String[] args) {
-        ConfigItem[] file = new ConfigItem[10];
-        Handler xmlHandler = Handler.getInstance("test.xml");
-        Handler jsonHandler = Handler.getInstance("test.json");
+        try {
+            List<ConfigItem> file = new ArrayList<>();
+            Handler xmlHandler = Handler.getInstance("test.xml");
+            Handler jsonHandler = Handler.getInstance("test.json");
+            Handler unknowHandler = Handler.getInstance("test.unknow");
+            //в зависимости от имени возращает конкр объект и потом вызываем методы рид и райт
+
+            xmlHandler.read();
+            xmlHandler.write(file);
+
+            jsonHandler.read();
+            jsonHandler.write(file);
+
+            unknowHandler.read();
+            unknowHandler.write(file);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
 

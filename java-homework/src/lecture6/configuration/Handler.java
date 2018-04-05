@@ -9,12 +9,16 @@ public abstract class Handler{
     }
 
     public static Handler getInstance(String fileName){
+        //вместо return null; - написать обработку исключения
         if (fileName.endsWith(".xml")){
             return new XmlHandler(fileName);
         } else if (fileName.endsWith(".json")){
             return new JsonHandler(fileName);
         }
-        return null;
+        throw new IllegalArgumentException("Filename should ends with .xml or .json!");
+
+        //вместо return null; - написать обработку исключения
+
     }
 
     public abstract List<ConfigItem> read();
