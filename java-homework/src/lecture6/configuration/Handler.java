@@ -9,8 +9,6 @@ public abstract class Handler{
     }
 
     public static Handler getInstance(String fileName){
-
-
         if (fileName.endsWith(".xml")){
             return new XmlHandler(fileName);
         } //else {

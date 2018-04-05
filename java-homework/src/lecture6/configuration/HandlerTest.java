@@ -20,20 +20,20 @@ public class HandlerTest {
         //в зависимости от имени возращает конкр объект и потом вызываем методы рид и райт
         List<ConfigItem> data = new ArrayList<>();
         String xmlFile = "test.xml";
-        String jsonFile = "test.json";
-        String unknownFile = "test.unknown";
         if (Handler.validateFileType(xmlFile)) {
-            Handler xmlHandler = Handler.getInstance("test.xml");
+            Handler xmlHandler = Handler.getInstance(xmlFile);
             xmlHandler.read();
             xmlHandler.write(data);
         }
 
+        String jsonFile = "test.json";
         if (Handler.validateFileType(jsonFile)) {
             Handler jsonHandler = Handler.getInstance(jsonFile);
             jsonHandler.read();
             jsonHandler.write(data);
         }
 
+        String unknownFile = "test.unknown";
         if (Handler.validateFileType(unknownFile)){
             Handler unknownHandler = Handler.getInstance(unknownFile);
             unknownHandler.read();
