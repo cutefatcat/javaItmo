@@ -18,11 +18,11 @@ public class StringsClass {
 
     public static void main(String[] args) throws IOException {
         ArrayList<String> list = new ArrayList<>();
-
         File txt = new File("java-homework/src/lecture9/wp.txt");
         List<String> lines = Files.readAllLines(txt.toPath());
 
         list = splitIntoWords(lines, list);
+
         Map<String, Integer> wordsCount = task1(list);
         for (Map.Entry<String,Integer> entry : wordsCount.entrySet()){
             String word = entry.getKey();
@@ -37,6 +37,13 @@ public class StringsClass {
             for (String word : entry.getValue()){
                 System.out.println(word);
             }
+        }
+
+        Map<Character,Integer> letterCount = task5(list);
+        for (Map.Entry<Character,Integer> entry : letterCount.entrySet()){
+            Character word = entry.getKey();
+            Integer count = entry.getValue();
+            System.out.println(word + " : " + count);
         }
     }
 
@@ -86,4 +93,35 @@ public class StringsClass {
         return groupsByLength;
     }
 
+    public static Map<Character, Integer> task5(ArrayList<String> list){
+        Map<Character,Integer> letterCount = new HashMap<>();
+        //Set<Character> letters = new HashSet<>();
+        List<String> tmpList = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++) {
+            tmpList.add(list.get(i).replace("-", "").replace("\'", ""));
+        }
+
+        for (int i = 0; i < tmpList.size(); i++){
+            for (int j = 0; j < tmpList.get(i).length(); j++){
+                Character letter = tmpList.get(i).charAt(j);
+                if (letterCount.containsKey(tmpList.get(i).charAt(j))){
+                    Integer count = letterCount.get(letter);
+                    count++;
+                    letterCount.replace(letter, count);
+                } else {
+                    letterCount.put(letter, 1);
+                }
+            }
+        }
+
+        Integer countSum = 0;
+        for (Map.Entry<Character,Integer> entry : letterCount.entrySet()){
+            countSum = countSum + entry.getValue();
+        }
+
+        return letterCount;
+    }
+
+    //пустые строки убирать через isEmpty или через length()
 }
