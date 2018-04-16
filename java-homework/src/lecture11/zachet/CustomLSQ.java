@@ -1,5 +1,7 @@
 package lecture11.zachet;
 
+import java.util.NoSuchElementException;
+
 /**
  * задание 2
  * Написать (собственные) LinkedList, Stack, Queue - generic
@@ -17,7 +19,7 @@ package lecture11.zachet;
 //}
 
 
-public class CustomList {
+public class CustomLSQ {
     public static void main(String[] args) {
         GenericLinkedList<Integer> list = new GenericLinkedList<>();
         list.add(2);
@@ -27,6 +29,15 @@ public class CustomList {
         for (int i = 0; i < list.getSize(); i++){
             System.out.println(list.get(i));
         }
+
+        GenericStack<String> stack = new GenericStack<>();;
+        System.out.println(stack.isEmpty());
+        stack.push("one");
+        stack.push("two");
+        stack.push("three");
+        System.out.println(stack.pop());
+        System.out.println(stack.isEmpty());
+
     }
 }
 
@@ -39,10 +50,19 @@ class Node<T>{
     }
 }
 
+
+
+
 class GenericLinkedList<T> {
     //LinkedList односвязный
     private Node<T> head;
     private int size = 0;
+
+    //инициализации
+    public GenericLinkedList() {
+        head = null;
+        size = 0;
+    }
 
     public int getSize() {
         return size;
@@ -101,6 +121,48 @@ class GenericLinkedList<T> {
         }
 
         return currentNode;
+    }
+}
+
+
+
+
+class GenericStack<T> {
+    //LinkedList односвязный
+    private Node<T> first;
+    private int size;
+
+    public GenericStack() {
+        first = null;
+        size = 0;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return first == null;
+    }
+
+    //помещение элемента в вершину стека
+    public  void push(T value){
+        Node<T> newNode = new Node<>(value);
+        //все равно есть ли первый элемент или он null,
+        //на него в любом случае будет сделана ссылка
+        newNode.next = first;
+        first = newNode;
+    }
+
+    // извлечение верхнего элемента (с удалением его из стека)
+    public T pop() {
+        if (isEmpty()){
+            throw new NoSuchElementException();
+        }
+        T value = first.value;
+        first = first.next;
+        size--;
+        return value;
     }
 }
 
