@@ -38,11 +38,6 @@ public class CustomLSQ {
         stack.push("three");
         System.out.println(stack.pop());
         System.out.println(stack.isEmpty());
-
-        GenericQueue<Integer> queue = new GenericQueue<>();
-        queue.add(1);
-        queue.add(2);
-        queue.add(3);
     }
 }
 
@@ -171,34 +166,4 @@ class GenericStack<T> {
     }
 }
 
-class GenericQueue<T>{
-    // 1й зашел, 1й вышел
-    private Node<T> first;
-    private Node<T> last;
-    private int size;
-
-    public GenericQueue(){
-        first = null;
-        last = null;
-        size = 0;
-    }
-
-    public int getSize(){
-        return size;
-    }
-
-    public void add(T value){
-        Node<T> newNode = new Node<>(value);
-        //last = newNode;
-
-        if (first == null) {
-            last = newNode;
-            first = last;
-        } else {
-            newNode.next = last;
-            last = newNode;
-        }
-        size++;
-    }
-}
 
