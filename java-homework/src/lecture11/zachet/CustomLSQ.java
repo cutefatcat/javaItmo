@@ -1,6 +1,7 @@
 package lecture11.zachet;
 
 import java.util.NoSuchElementException;
+import java.util.Queue;
 
 /**
  * задание 2
@@ -37,7 +38,6 @@ public class CustomLSQ {
         stack.push("three");
         System.out.println(stack.pop());
         System.out.println(stack.isEmpty());
-
     }
 }
 
@@ -49,7 +49,6 @@ class Node<T>{
         this.value = value;
     }
 }
-
 
 
 
@@ -128,7 +127,7 @@ class GenericLinkedList<T> {
 
 
 class GenericStack<T> {
-    //LinkedList односвязный
+    //1й зашел, последний вышел
     private Node<T> first;
     private int size;
 
@@ -146,12 +145,13 @@ class GenericStack<T> {
     }
 
     //помещение элемента в вершину стека
-    public  void push(T value){
+    public void push(T value){
         Node<T> newNode = new Node<>(value);
         //все равно есть ли первый элемент или он null,
         //на него в любом случае будет сделана ссылка
         newNode.next = first;
         first = newNode;
+        size++;
     }
 
     // извлечение верхнего элемента (с удалением его из стека)
