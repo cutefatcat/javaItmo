@@ -4,11 +4,12 @@ import java.util.*;
 
 public class Arrayss {
     public static void main(String[] args) {
-        //t1(20);
-        //t2(99);
-        //createAndPrint();
-        //t6();
-        t4();
+        printArrayTask(20);
+        printInverseTask(99);
+        checkEvenSequenceTask();
+        checkAverageTask();
+        checkIncreasingSequenceTask();
+        checkHalfArrayModSumTask();
     }
 
     /**
@@ -17,7 +18,7 @@ public class Arrayss {
      * в столбик (отделяя один элемент от другого началом новой строки). Перед
      * созданием массива подумайте, какого он будет размера. 2 4 6 … 18 20 2 4 6 … 20
      */
-    public static void t1(int n) {
+    public static void printArrayTask(int n) {
         int sizeArr = n / 2;
         int[] even = new int[sizeArr];
         int ev = 2;
@@ -26,7 +27,7 @@ public class Arrayss {
             ev += 2;
         }
 
-        printThroughSpace(even);
+        printInRow(even);
         print(even);
     }
 
@@ -41,7 +42,7 @@ public class Arrayss {
      *  на экран в строку, а затем этот же массив выведите на экран тоже в строку,
      *  но в обратном порядке (99 97 95 93 … 7 5 3 1).
      */
-    public static void t2(int n) {
+    public static void printInverseTask(int n) {
         int sizeArr = n / 2 + 1;
         int[] odd = new int[sizeArr];
         int od = 1;
@@ -50,11 +51,11 @@ public class Arrayss {
             od += 2;
         }
 
-        printThroughSpace(odd);
-        printInverseThroughSpace(odd);
+        printInRow(odd);
+        printInverseInRow(odd);
     }
 
-    public static void printInverseThroughSpace(int[] arr) {
+    public static void printInverseInRow(int[] arr) {
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.print(arr[i]);
             if (i != 0) {
@@ -69,7 +70,7 @@ public class Arrayss {
      * Выведите массив на экран. Подсчитайте сколько в массиве чётных элементов и
      * выведете это количество на экран на отдельной строке.
      */
-    public static void createAndPrint() {
+    public static void checkEvenSequenceTask() {
         int[] randomNumbers = new int[15];
         for (int i = 0; i < randomNumbers.length; i++) {
            randomNumbers[i] = (int)(Math.random() * 9);
@@ -95,15 +96,15 @@ public class Arrayss {
      * арифметическое элементов каждого массива и сообщите, для какого из массивов
      * это значение оказалось больше (либо сообщите, что их средние арифметические равны).
      */
-    public static void t4() {
+    public static void checkAverageTask() {
         int[] firstRandomNumbers = new int[5];
         int[] secondRandomNumbers = new int[5];
-        arrayFilling(firstRandomNumbers);
-        arrayFilling(secondRandomNumbers);
+        fillArray(firstRandomNumbers);
+        fillArray(secondRandomNumbers);
 
 
-        printThroughSpace(firstRandomNumbers);
-        printThroughSpace(secondRandomNumbers);
+        printInRow(firstRandomNumbers);
+        printInRow(secondRandomNumbers);
         double firstAvg = calculateAverage(firstRandomNumbers);
         double secondAvg = calculateAverage(secondRandomNumbers);
         System.out.println(compareAverage(firstAvg, secondAvg));
@@ -111,7 +112,7 @@ public class Arrayss {
         //System.out.println(firstAvg + ", " + secondAvg);
     }
 
-    private static void arrayFilling(int[] randomNumbers){
+    private static void fillArray(int[] randomNumbers) {
         for (int i = 0; i < randomNumbers.length; i++) {
             randomNumbers[i] = (int) (Math.random() * 5);
         }
@@ -143,7 +144,30 @@ public class Arrayss {
      * на экран в строку. Определить и вывести на экран сообщение о том, является ли
      * массив строго возрастающей последовательностью.
      */
-    
+    public static void checkIncreasingSequenceTask() {
+        int[] randomNumbers = new int[4];
+        int minNumb = 10;
+        int maxNumb = 99;
+        for (int i = 0; i < randomNumbers.length; i++) {
+            randomNumbers[i] = minNumb + (int) (Math.random() * (maxNumb - minNumb));
+        }
+
+        printInRow(randomNumbers);
+        System.out.println(isIncreasingSequence(randomNumbers));
+    }
+
+    public static boolean isIncreasingSequence(int[] array) {
+        boolean result = false;
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] < array[i+1]) {
+                result = true;
+            } else {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
 
     /**
      * 6) Пользователь должен указать с клавиатуры чётное положительное число,
@@ -160,7 +184,7 @@ public class Arrayss {
      * int i = sc.nextInt();  // для числа
      * String str = sc.nextLine(); // для строки
      */
-    public static void t6() {
+    public static void checkHalfArrayModSumTask() {
         Scanner sc = new Scanner(System.in);
         int n;
         do {
@@ -169,15 +193,15 @@ public class Arrayss {
         } while (n <= 0 || n%2 != 0);
 
         int[] randomArr = new int[n];
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             randomArr[i] = getRandomArbitrary(-5,5);
         }
         System.out.println(Arrays.toString(randomArr));
 
         int countSumLeftPart = 0;
         int countSumRightPart = 0;
-        for (int i = 0; i < n; i++){
-            if (i < n / 2){
+        for (int i = 0; i < n; i++) {
+            if (i < n / 2) {
                 countSumLeftPart += Math.abs(randomArr[i]);
             } else {
                 countSumRightPart += Math.abs(randomArr[i]);
@@ -185,9 +209,9 @@ public class Arrayss {
         }
 
         String result;
-        if (countSumLeftPart < countSumRightPart){
+        if (countSumLeftPart < countSumRightPart) {
             result = "Сумма модулей правой половины массива больше";
-        } else if (countSumLeftPart > countSumRightPart){
+        } else if (countSumLeftPart > countSumRightPart) {
             result = "Сумма модулей левой половины массива больше";
         } else {
             result = "Суммы модулей обех половин массива равны";
@@ -200,10 +224,10 @@ public class Arrayss {
     }
 
     /**
-     *
-     * @param arr
+     * Outputting array elements to a screen in a row, separating one element from another by a space.
+     * @param arr arrays.
      */
-    public static void printThroughSpace(int[] arr) {
+    public static void printInRow(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
             if (i != arr.length-1) {
